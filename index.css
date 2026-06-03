@@ -1,0 +1,15 @@
+:root {
+    /* Light mode */
+    --light-bg-100: #fafdfa;
+    --light-text-100: #071108;
+    --light-primary-100: #0727b6;
+    --light-secondary-100: #ad13d8;
+    --light-accent-10-: #1780a6;
+
+    /* Dark mode */
+    --dark-bg-100: #010401;
+    --dark-text-100: #edf8ee;
+    --dark-primary-100: #4a69f8;
+    --dark-secondary-100: #c226ec;
+    --dark-accent-10-: #5ac1e8;
+}
