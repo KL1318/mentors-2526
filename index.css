@@ -1,3 +1,28 @@
+@font-face {
+    font-family: "Avenir medium";
+    src: url(./fonts/Avenir-Medium.otf);
+}
+@font-face {
+    font-family: "Avenir medium italic";
+    src: url(./fonts/Avenir-MediumOblique.otf);
+}
+@font-face {
+    font-family: "Avenir heavy";
+    src: url(./fonts/Avenir-Heavy.otf);
+}
+@font-face {
+    font-family: "Avenir heavy italic";
+    src: url(./fonts/Avenir-HeavyOblique.otf);
+}
+@font-face {
+    font-family: "Avenir light";
+    src: url(./fonts/Avenir-Light.otf);
+}
+@font-face {
+    font-family: "Avenir light italic";
+    src: url(./fonts/Avenir-LightOblique.otf);
+}
+
 :root {
     /* Light mode */
     --light-bg-100: #fafdfa;
@@ -12,4 +37,80 @@
     --dark-primary-100: #4a69f8;
     --dark-secondary-100: #c226ec;
     --dark-accent-10-: #5ac1e8;
+}
+
+
+/* Text styling */
+h1 {
+    font-family: "Avenir heavy", "sans-serif";
+    font-size: 3em;
+}
+h2.card-title {
+    font-family: "Avenir heavy", "sans-serif";
+    font-size: 1.2em;
+}
+p {
+    font-family: "Avenir medium";
+}
+
+
+/* Element styling */
+header {
+    width: 100vw;
+    text-align: center;
+}
+
+hr.header-main-divider {
+    width: 75vw;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 75vw;
+    margin: 0% auto;
+}
+
+div.column {
+    width: 30%;
+}
+
+div.card {
+    display: flex;
+    flex-direction: column;
+    background-color: #dedede;
+    border-radius: 10px;
+    padding: 5%;
+    margin-bottom: 10px;
+}
+div img {
+    object-fit: fill;
+}
+
+
+/* Responsiveness handling */
+@media only screen and (max-width: 768px) {
+    main {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    div.column {
+        width: 100%;
+    }
+
+    div.card {
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    main {
+        width: 90vw;
+    }
+
+    hr.header-main-divider {
+        width: 90vw;
+    }
 }
