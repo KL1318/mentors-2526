@@ -25,18 +25,20 @@
 
 :root {
     /* Light mode */
-    --light-bg-100: #fafdfa;
-    --light-text-100: #071108;
-    --light-primary-100: #0727b6;
-    --light-secondary-100: #ad13d8;
-    --light-accent-10-: #1780a6;
+    --light-bg-100: #FFFFFF;
+    --light-bg-80: #E6E6E6;
+    --light-text-100: #000000;
+    --light-primary-100: ;
+    --light-secondary-100: ;
+    --light-accent-100: #EEEEEE;
 
     /* Dark mode */
-    --dark-bg-100: #010401;
-    --dark-text-100: #edf8ee;
-    --dark-primary-100: #4a69f8;
-    --dark-secondary-100: #c226ec;
-    --dark-accent-10-: #5ac1e8;
+    --dark-bg-100: #090e11;
+    --dark-bg-80: #1a2831;
+    --dark-text-100: #EFEFEF;
+    --dark-primary-100: ;
+    --dark-secondary-100: ;
+    --dark-accent-100: #233240;
 }
 
 
@@ -55,9 +57,35 @@ p {
 
 
 /* Element styling */
+body {
+    margin: 0%;
+}
+
+nav {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+button#dark-mode-toggle {
+    border: none;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2em;
+    transition: 0.2s;
+}
+button#dark-mode-toggle:hover {
+    cursor: pointer;
+}
+
 header {
     width: 100vw;
     text-align: center;
+}
+
+h1.page-header {
+    margin-bottom: 20px;
 }
 
 hr.header-main-divider {
@@ -79,7 +107,6 @@ div.column {
 div.card {
     display: flex;
     flex-direction: column;
-    background-color: #dedede;
     border-radius: 10px;
     padding: 5%;
     margin-bottom: 10px;
@@ -89,8 +116,86 @@ div img {
 }
 
 
+/* Light mode styling */
+body.light,
+header.light,
+main.light,
+div.col-light
+{
+    background-color: var(--light-bg-100);
+}
+
+hr.light {
+    border-color: var(--light-text-100);
+}
+
+div.card-light {
+    background-color: var(--light-accent-100);
+}
+
+button.light {
+    background-color: var(--light-bg-100);
+    color: var(--light-text-100);
+}
+button.light:hover {
+    background-color: var(--light-bg-80);
+}
+
+h1.light,
+h2.light,
+p.light
+{
+    color: var(--light-text-100);
+}
+
+/* Dark mode styling */
+body.dark,
+header.dark,
+main.dark,
+div.col-dark
+{
+    background-color: var(--dark-bg-100);
+}
+
+hr.dark {
+    border-color: var(--dark-text-100);
+}
+
+div.card-dark {
+    background-color: var(--dark-accent-100);
+}
+
+button.dark {
+    background-color: var(--dark-bg-100);
+    color: var(--dark-text-100);
+}
+button.dark:hover {
+    background-color: var(--dark-bg-80);
+}
+
+h1.dark,
+h2.dark,
+p.dark
+{
+    color: var(--dark-text-100);
+}
+
+
 /* Responsiveness handling */
 @media only screen and (max-width: 768px) {
+    nav {
+        position: static;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    button#dark-mode-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5em;
+    }
+
     main {
         justify-content: center;
         flex-direction: column;
