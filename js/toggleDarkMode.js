@@ -48,7 +48,6 @@ function setLightMode() {
         item.classList.add("col-light");
     });
     document.querySelectorAll(".card-dark").forEach((item) => {
-        console.log(item);
         item.classList.remove("card-dark");
         item.classList.add("card-light");
     });
