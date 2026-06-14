@@ -45,7 +45,7 @@ async function loadContentToWebpage() {
         card_message_author.classList.add("card-author");
         card_message_author.classList.add("light");
         const card_message_author_italic = document.createElement("i");
-        card_message_author_italic.innerText = message_obj.author;
+        card_message_author_italic.innerText = "From: " + message_obj.author;
         card_message_author.appendChild(card_message_author_italic);
         card_message_container.appendChild(card_message_author);
         const card_message_message = document.createElement("p");
@@ -53,9 +53,11 @@ async function loadContentToWebpage() {
         card_message_message.innerText = message_obj.message;
         card_message_container.appendChild(card_message_message);
 
-
+        
         const column_num = (curr_folder % 3) + 1;
         document.getElementById("column" + column_num).appendChild(card);
+
+        // console.log(card.offsetHeight);
     }
 }
 
