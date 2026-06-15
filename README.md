@@ -1,6 +1,6 @@
 # IF YOU ARE A CS/AI MENTOR, PLEASE CLOSE THIS WEBPAGE IMMEDIATELY! YOU'LL SEE WHY SOON ENOUGH.
 
-.  
+**If you are not a CS/AI mentor for 2025/2026, please keep on reading**  
 .  
 .  
 .  
@@ -21,19 +21,20 @@
 
 # For non-mentors
 
-Given you are still reading this, you are probably not a CS or AI mentor at this moment (go away Gonçalo and Vitor, seriously). As I have had a blast this year mostly thanks to the mentor program, I decided it's time to give them something back for their hard work. And you can contribute too!
+Given you are still reading this, you are probably not a CS or AI mentor at this moment (go away Gonçalo and Vitor, seriously). As I have had a blast this year mostly thanks to the mentor program, I decided it's time to give them something back for their hard work. And you can help out too!
 
 ## The concept
 
-As you can probably already tell, this repo builds a website that is hosted via GitHub pages. You, given you are a first-year CS or AI bachelor student, can create a pull request (more info on that below) and upload an image and a JSON file in which you can write a nice message to the mentors. The  website loads all files dynamically, so together we build a cool (and hopefully large) library of kind messages that we can give to the mentors at the final event of the year, namely the barbeque.
+The idea is that as many people as possible upload a nice message and optionally a picture to this repo, which builds a website that loads all of your messages and pictures, so that the mentors can read how much they've meant to you and us. The more people write a nice message, the more kind messages the mentors get to read, thus making it a better gift. So if you know other people who've enjoyed the mentor program events, please send them this repo, so they can also write their message!
 
-## What you can do
+**IMPORTANT!** 
 
-To make this the best gift possible, please share this repo with all of your first-year friends (and enemies). However, **BEWARE OF GROUPCHATS**!! If you want to share this repo in a groupchat, make sure you are **1000% CERTAIN** that **NONE** of the mentors are in that groupchat. If you are unsure, don't share it in that groupchat.
+Do **NOT** share this repo in groupchats with mentors or with the mentors directly! This website will be revealed to them at the final mentor event of the year (the barbeque), and we'd like to keep it a surprise until then!
 
-Besides sharing this repo, the best you can do to contribute is to create a pull request to add your own kind message to this list! If you are unsure of how this works, follow the guide below. If there is anything you still have questions about, read the FAQ at the bottom.
 
-# Contributing (Creating a pull request)
+# Leaving your message to the mentors
+
+For your message to be added, you will need to make a pull request, which is a way to add code and files to a repository like this. How you do this and what exactly you need to upload for the webpage to include your message, you can find 
 
 .  
 .  
