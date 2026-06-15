@@ -32,14 +32,9 @@ The idea is that as many people as possible upload a nice message and optionally
 Do **NOT** share this repo in groupchats with mentors or with the mentors directly! This website will be revealed to them at the final mentor event of the year (the barbeque), and we'd like to keep it a surprise until then!
 
 
-# Leaving your message to the mentors
+# Uploading your message for the mentors
 
-For your message to be added, you will need to make a pull request, which is a way to add code and files to a repository like this. How you do this and what exactly you need to upload for the webpage to include your message, you can find 
-
-.  
-.  
-.  
-With the images, the uploader must make sure that everybody in the image agrees on the image becoming publicly available online to keep everybody's privacy intact. Uploading an image is not mandatory! Nor is giving your actual name. You can put "anonymous", a pseudonym or just simply an empty string in the author field.
+For your message to be added, you will need to make a pull request, which is a way to add code and files to a repository like this. How you do this and what exactly you need to upload for the webpage to include your message, you can find a full tutorial on how to do this at [`main/Tutorial/How_to_upload_your_own_message.md`](./Tutorial/How_to_upload_your_own_message.md). Have you already made pull requests before and do you just want a quick explanation of what you should upload to have your message appear on the webpage? You can find this info at [`main/Tutorial/Making_your_message.md`](./Tutorial/Making_your_message.md).
 
 
 # FAQ
