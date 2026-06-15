@@ -19,45 +19,52 @@ async function loadContentToWebpage() {
         const message_obj = await fetchItem(dir + folder_arr[curr_folder] + "/message.json");
         let image_dir = "";
 
-        if (message_obj.image_filename !== "") {
-            image_dir = dir + folder_arr[curr_folder] + "/" + message_obj.image_filename;   
+        if (message_obj !== "404") {
+            if (message_obj.image_filename !== "") {
+                image_dir = dir + folder_arr[curr_folder] + "/" + message_obj.image_filename;   
+            } else {
+                image_dir = "No image";
+            }
+    
+            const card = document.createElement("div");
+            card.classList.add("card");
+            card.classList.add("card-light");
+            if (image_dir !== "No image") {
+                const card_image = document.createElement("img");
+                card_image.src = image_dir;
+                card.appendChild(card_image);
+            }
+            const card_message_container = document.createElement("div");
+            card_message_container.classList.add("card-text");
+            card.appendChild(card_message_container);
+            const card_message_header = document.createElement("h2");
+            card_message_header.classList.add("card-title");
+            card_message_header.classList.add("light");
+            card_message_header.innerText = message_obj.title;
+            card_message_container.appendChild(card_message_header)
+            if (message_obj.author !== "") {
+                const card_message_author = document.createElement("p");
+                card_message_author.classList.add("card-author");
+                card_message_author.classList.add("light");
+                const card_message_author_italic = document.createElement("i");
+                card_message_author_italic.innerText = "From: " + message_obj.author;
+                card_message_author.appendChild(card_message_author_italic);
+                card_message_container.appendChild(card_message_author);
+            }
+            const card_message_message = document.createElement("p");
+            card_message_message.classList.add("light");
+            card_message_message.innerText = message_obj.message;
+            card_message_container.appendChild(card_message_message);
+    
+            
+            const column_num = (curr_folder % 3) + 1;
+            document.getElementById("column" + column_num).appendChild(card);
+            console.log(column_num);
+    
+            // console.log(card.offsetHeight);
         } else {
-            image_dir = "No image";
+            console.error(`Couldn't load ${dir + folder_arr[curr_folder] + "/message.json"}, file was not found or wrongly filled in`);
         }
-
-        const card = document.createElement("div");
-        card.classList.add("card");
-        card.classList.add("card-light");
-        if (image_dir !== "No image") {
-            const card_image = document.createElement("img");
-            card_image.src = image_dir;
-            card.appendChild(card_image);
-        }
-        const card_message_container = document.createElement("div");
-        card_message_container.classList.add("card-text");
-        card.appendChild(card_message_container);
-        const card_message_header = document.createElement("h2");
-        card_message_header.classList.add("card-title");
-        card_message_header.classList.add("light");
-        card_message_header.innerText = message_obj.title;
-        card_message_container.appendChild(card_message_header)
-        const card_message_author = document.createElement("p");
-        card_message_author.classList.add("card-author");
-        card_message_author.classList.add("light");
-        const card_message_author_italic = document.createElement("i");
-        card_message_author_italic.innerText = "From: " + message_obj.author;
-        card_message_author.appendChild(card_message_author_italic);
-        card_message_container.appendChild(card_message_author);
-        const card_message_message = document.createElement("p");
-        card_message_message.classList.add("light");
-        card_message_message.innerText = message_obj.message;
-        card_message_container.appendChild(card_message_message);
-
-        
-        const column_num = (curr_folder % 3) + 1;
-        document.getElementById("column" + column_num).appendChild(card);
-
-        // console.log(card.offsetHeight);
     }
 }
 
