@@ -1,6 +1,7 @@
 {
-    "folder_amount": 0,
+    "folder_amount": 2,
     "folders": [
-
+        "Example_no_image",
+        "Example_with_image"
     ]
 }
