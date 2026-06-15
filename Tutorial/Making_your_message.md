@@ -1,5 +1,7 @@
 # Quick message guidelines
 
+**THANK YOU for wanting to contribute!**
+
 This guide assumes that you have a GitHub account and you have git installed, and you know how to use it, and that you know how to make a proper pull request. This guide will only explain what you need to push for your message to appear on the webpage. **Make sure you read everything below so your pull request will be accepted.**
 
 ## How the webpage works
@@ -31,7 +33,7 @@ You can now write your message inside the message.json file you've created. Here
 
 | Field | Mandatory? | How to use | Example |
 |:-----:|:----------:|:-----------|:-------:|
-| "image_filename" | Depends | If you've added a picture to your folder, write down the file name and file type in this field | [`Example_with_image`](../Example_folders/Example_with_image/message.json) [`Example_without_image`](../Example_folders/Example_no_image/message.json) |
+| "image_filename" | Depends | If you've added a picture to your folder, write down the file name and file type in this field (see examples) | [`Example_with_image`](../Example_folders/Example_with_image/message.json) [`Example_without_image`](../Example_folders/Example_no_image/message.json) |
 | "title" | Yes | Write a title to your message in this field | [`Example_with_title`](../Example_folders/Example_no_image/message.json) |
 | "author" | No | Write your name, a pseudonym or leave this field blank to stay fully anonymous | [`Example_with_author`](../Example_folders/Example_no_image/message.json) [`Èxample_without_author`](../Example_folders/Example_no%20author/) |
 | "message" | Yes | Write your kind message to the mentors! The examples contain some idea's, but don't be scared to write your own thing! (Try not to exceed 100 words) | [`Example_message`](../Example_folders/Example_no_image/message.json) |
@@ -40,6 +42,7 @@ The example message folders together would look like this on the final webpage:
 
 ![Image of the example message folder webpage](./readme_images/Example_folders_outcome.png)
 
+**THANK YOU again for contributing! The more people add their message to this webpage, the better of a gift it becomes!**
 
 ## Reasons your pull request may be declined
 

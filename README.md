@@ -37,16 +37,4 @@ Do **NOT** share this repo in groupchats with mentors or with the mentors direct
 For your message to be added, you will need to make a pull request, which is a way to add code and files to a repository like this. How you do this and what exactly you need to upload for the webpage to include your message, you can find a full tutorial on how to do this at [`main/Tutorial/How_to_upload_your_own_message.md`](./Tutorial/How_to_upload_your_own_message.md). Have you already made pull requests before and do you just want a quick explanation of what you should upload to have your message appear on the webpage? You can find this info at [`main/Tutorial/Making_your_message.md`](./Tutorial/Making_your_message.md).
 
 
-# FAQ
-
-### I don't have a GitHub account and I dont want to make one, what can I do to still get my message on the webpage?
-
-Completely understandable! Try to find somebody who can create the pull request for you, and send them your message, the title you want to give your message, your name and the picture you want to upload, so they can create the pull request.
-
-### I don't feel comfortable making a pull request, what can I do to still get my message on the webpage?
-
-I understand it might be a little uncomfortable making a pull request, especially if it's your first time, however I recommend you still try it. If you really don't want to do it, ask a friend to do it for you.
-
-### I created a pull request, but my message hasn't shown up on the webpage yet. Did I do something wrong?
-
-If you followed the instructions for the pull request, you should be totally fine. I check the pull requests for spam and AI generated content, so I will have to accept it before your message will appear.
+**THANK YOU for contributing! :) The more people add their message for the mentors to this webpage, the better of a gift it becomes!**
