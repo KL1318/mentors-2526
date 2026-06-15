@@ -33,7 +33,7 @@ You can now write your message inside the message.json file you've created. Here
 
 | Field | Mandatory? | How to use | Example |
 |:-----:|:----------:|:-----------|:-------:|
-| "image_filename" | Depends | If you've added a picture to your folder, write down the file name and file type in this field (see examples) | [`Example_with_image`](../Example_folders/Example_with_image/) [`Example_without_image`](../Example_folders/Example_no_image/) |
+| "image_filename" | Depends | If you've added a picture to your folder, write down the file name and file type in this field (see examples). Else, just leave the field empty | [`Example_with_image`](../Example_folders/Example_with_image/) [`Example_without_image`](../Example_folders/Example_no_image/) |
 | "title" | Yes | Write a title to your message in this field | [`Example_with_title`](../Example_folders/Example_no_image/) |
 | "author" | No | Write your name, a pseudonym or leave this field blank to stay fully anonymous | [`Example_with_author`](../Example_folders/Example_no_image/) [`Èxample_without_author`](../Example_folders/Example_no_author/) |
 | "message" | Yes | Write your kind message to the mentors! The examples contain some idea's, but don't be scared to write your own thing! (Try not to exceed 100 words) | [`Example_message`](../Example_folders/Example_no_image/) |
