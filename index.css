@@ -28,17 +28,15 @@
     --light-bg-100: #FFFFFF;
     --light-bg-80: #E6E6E6;
     --light-text-100: #000000;
-    --light-primary-100: ;
-    --light-secondary-100: ;
     --light-accent-100: #EEEEEE;
 
     /* Dark mode */
     --dark-bg-100: #090e11;
     --dark-bg-80: #1a2831;
     --dark-text-100: #EFEFEF;
-    --dark-primary-100: ;
-    --dark-secondary-100: ;
     --dark-accent-100: #233240;
+
+    /* If you can come up with a better color scheme, be my guest! I suck at color theory, so I just kinda guessed until it looked okay. */
 }
 
 
