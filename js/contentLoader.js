@@ -1,4 +1,4 @@
-const dir = "http://127.0.0.1:5500/content/";
+const dir = "https://kl1318.github.io/mentors-2526/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally
 
 
 document.getElementById("message-container").addEventListener("click", (event) => {
