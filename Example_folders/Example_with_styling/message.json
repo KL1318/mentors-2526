@@ -1,7 +1,7 @@
 {
     "image_filename": "",
-    "uses_styling": false,
+    "uses_styling": true,
     "title": "Thank you mentors!",
     "author": "Ewout",
-    "message": "<p style='color: #00FF00;'>Thanks again!</p> This is an example of a message with <span style='color: red;'>styling</span>!"
+    "message": "<p style='color: #00FF00;'>Thanks again!</p> <p class='light'>This is an example of a message with <span style='color: red;'>styling</span>!</p>"
 }

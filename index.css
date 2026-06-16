@@ -57,6 +57,21 @@ span.img-close-btn {
     font-size: 1.6em;
 }
 
+h3,
+h4,
+h5,
+h6
+{
+    font-family: "Avenir heavy";
+}
+
+p,
+span,
+div
+{
+    font-family: "Avenir medium";
+}
+
 
 /* Element styling */
 body {
