@@ -1,4 +1,4 @@
-const dir = "http://127.0.0.1:5500/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally and https://kl1318.github.io/mentors-2526/content/ when pushing
+const dir = "https://kl1318.github.io/mentors-2526/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally and https://kl1318.github.io/mentors-2526/content/ when pushing
 
 
 document.getElementById("message-container").addEventListener("click", (event) => {
@@ -50,86 +50,97 @@ async function loadContentToWebpage() {
     for (let curr_folder = 0; curr_folder < num_folders; curr_folder++) {
         const message_obj = await fetchItem(dir + folder_arr[curr_folder] + "/message.json");
         let message_contains_scripts = await checkForScripts(message_obj);
-        let image_dir = "";
-        let card = ``;
+        
+        if (message_obj !== "404") {
+            if (message_obj.uses_styling == true && !message_contains_scripts) {
+                let card = ``;
+                
+                if (message_obj.image_filename !== "" && message_obj.author !== "") {
+                    card = 
+                        `<div class="card card-light">
+                            <img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">
+                            <div class="card-text">
+                                <h2 class="card-title light">${message_obj.title}</h2>
+                                <p class="card-author light"><i>${message_obj.author}</i></p>
+                                <p class="light">${message_obj.message}</p>
+                            </div>
+                        </div>`;
+                } else if (message_obj.image_filename === "" && message_obj.author !== "") {
+                    card = 
+                        `<div class="card card-light">
+                            <div class="card-text">
+                                <h2 class="card-title light">${message_obj.title}</h2>
+                                <p class="card-author light"><i>${message_obj.author}</i></p>
+                                <p class="light">${message_obj.message}</p>
+                            </div>
+                        </div>`;
+                } else if (message_obj.image_filename !== "" && message_obj.author === "") {
+                    card = 
+                        `<div class="card card-light">
+                            <img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">
+                            <div class="card-text">
+                                <h2 class="card-title light">${message_obj.title}</h2>
+                                <p class="light">${message_obj.message}</p>
+                            </div>
+                        </div>`;
+                } else if (message_obj.image_filename === "" && message_obj.author === "") {
+                    card = 
+                        `<div class="card card-light">
+                            <div class="card-text">
+                                <h2 class="card-title light">${message_obj.title}</h2>
+                                <p class="light">${message_obj.message}</p>
+                            </div>
+                        </div>`;
+                }
 
-        if (message_obj !== "404" && !message_contains_scripts) {
-            if (message_obj.image_filename !== "" && message_obj.author !== "") {
-                card = 
-                    `<div class="card card-light">
-                        <img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">
-                        <div class="card-text">
-                            <h2 class="card-title light">${message_obj.title}</h2>
-                            <p class="card-author light"><i>${message_obj.author}</i></p>
-                            <p class="light">${message_obj.message}</p>
-                        </div>
-                    </div>`;
-            } else if (message_obj.image_filename === "" && message_obj.author !== "") {
-                card = 
-                    `<div class="card card-light">
-                        <div class="card-text">
-                            <h2 class="card-title light">${message_obj.title}</h2>
-                            <p class="card-author light"><i>${message_obj.author}</i></p>
-                            <p class="light">${message_obj.message}</p>
-                        </div>
-                    </div>`;
-            } else if (message_obj.image_filename !== "" && message_obj.author === "") {
-                card = 
-                    `<div class="card card-light">
-                        <img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">
-                        <div class="card-text">
-                            <h2 class="card-title light">${message_obj.title}</h2>
-                            <p class="light">${message_obj.message}</p>
-                        </div>
-                    </div>`;
-            } else if (message_obj.image_filename === "" && message_obj.author === "") {
-                card = 
-                    `<div class="card card-light">
-                        <div class="card-text">
-                            <h2 class="card-title light">${message_obj.title}</h2>
-                            <p class="light">${message_obj.message}</p>
-                        </div>
-                    </div>`;
+                const column_num = (curr_folder % 3) + 1;
+                document.getElementById("column" + column_num).innerHTML += card;
+            } else if (message_obj.uses_styling == true && message_contains_scripts) {
+                console.error("Message contained illegal items. Script didn't load to prevent script injection.");
+            } else if (message_obj.uses_styling == false) {
+                let image_dir = "";
+
+                if (message_obj.image_filename !== "") {
+                    image_dir = dir + folder_arr[curr_folder] + "/" + message_obj.image_filename;
+                } else {
+                    image_dir = "No image";
+                }
+
+                const card = document.createElement("div");
+                card.classList.add("card");
+                card.classList.add("card-light");
+                if (image_dir !== "No image") {
+                    const card_image = document.createElement("img");
+                    card_image.src = image_dir;
+                    card.appendChild(card_image);
+                }
+                const card_message_container = document.createElement("div");
+                card_message_container.classList.add("card-text");
+                card.appendChild(card_message_container);
+                const card_message_header = document.createElement("h2");
+                card_message_header.classList.add("card-title");
+                card_message_header.classList.add("light");
+                card_message_header.innerText = message_obj.title;
+                card_message_container.appendChild(card_message_header)
+                if (message_obj.author !== "") {
+                    const card_message_author = document.createElement("p");
+                    card_message_author.classList.add("card-author");
+                    card_message_author.classList.add("light");
+                    const card_message_author_italic = document.createElement("i");
+                    card_message_author_italic.innerText = "From: " + message_obj.author;
+                    card_message_author.appendChild(card_message_author_italic);
+                    card_message_container.appendChild(card_message_author);
+                }
+                const card_message_message = document.createElement("p");
+                card_message_message.classList.add("light");
+                card_message_message.innerText = message_obj.message;
+                card_message_container.appendChild(card_message_message);
+
+                const column_num = (curr_folder % 3) + 1;
+                document.getElementById("column" + column_num).appendChild(card);
             }
     
-
-            // const card = document.createElement("div");
-            // card.classList.add("card");
-            // card.classList.add("card-light");
-            // if (image_dir !== "No image") {
-            //     const card_image = document.createElement("img");
-            //     card_image.src = image_dir;
-            //     card.appendChild(card_image);
-            // }
-            // const card_message_container = document.createElement("div");
-            // card_message_container.classList.add("card-text");
-            // card.appendChild(card_message_container);
-            // const card_message_header = document.createElement("h2");
-            // card_message_header.classList.add("card-title");
-            // card_message_header.classList.add("light");
-            // card_message_header.innerText = message_obj.title;
-            // card_message_container.appendChild(card_message_header)
-            // if (message_obj.author !== "") {
-            //     const card_message_author = document.createElement("p");
-            //     card_message_author.classList.add("card-author");
-            //     card_message_author.classList.add("light");
-            //     const card_message_author_italic = document.createElement("i");
-            //     card_message_author_italic.innerText = "From: " + message_obj.author;
-            //     card_message_author.appendChild(card_message_author_italic);
-            //     card_message_container.appendChild(card_message_author);
-            // }
-            // const card_message_message = document.createElement("p");
-            // card_message_message.classList.add("light");
-            // card_message_message.innerText = message_obj.message;
-            // card_message_container.appendChild(card_message_message);
-    
-            
-            const column_num = (curr_folder % 3) + 1;
-            document.getElementById("column" + column_num).innerHTML += card;
-    
             // console.log(card.offsetHeight);
-        } else if (message_contains_scripts) {
-            console.error("Message contained illegal items. Script didn't load to prevent script injection.");
         } else {
             console.error(`Couldn't load ${dir + folder_arr[curr_folder] + "/message.json"}, file was not found.`);
         }
