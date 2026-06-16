@@ -27,7 +27,7 @@ Each message folder also must have a unique name, which should be clear why.
 
 ## Adding your message
 
-Start by creating a folder with a unique name inside the "content" folder. Inside this folder, create a file named "message.json" (without the quotes), and copy the contents of [`Example_folders/Empty_message.json`](../Example_folders/Empty_message.json) into the message.json file you just created. If you want to add a picture to your message, also add your picture in this folder (make sure everybody in the picture is okay with you using that picture, it will be visible to the entire internet after all). 
+Start by creating a folder with a unique name inside the "content" folder. Inside this folder, create a file named "message.json" (without the quotes), and copy the contents of [`Example_folders/Empty_message.json`](../Example_folders/Empty_message.json) into the message.json file you just created. If you want to add a picture to your message (like a group picture with your friends or mentors), also add your picture in this folder (make sure everybody in the picture is okay with you using that picture, it will be visible to the entire internet after all). 
 
 You can now write your message inside the message.json file you've created. Here is a description of the fields you may use:
 
@@ -49,4 +49,4 @@ The example message folders together would look like this on the final webpage:
 Here are some reasons your pull request may be declined:
 - Your message contains nonsense (random letters)
 - You are spamming pull requests (if you are making pull requests for other people, make this very clear, and indicate who you are making a pull request for)
-- You are editing files (please only upload files. If at some point there are tens of folders all with the same structure and filenames, it becomes hard for me to chheck if you are editing your own message submission or someboody elses. Editing webpage files is not allowed.)
+- You are editing files (please only upload files. If at some point there are tens of folders all with the same structure and filenames, it becomes hard for me to check if you are editing your own submission or someboody elses. Editing webpage files is not allowed.)
