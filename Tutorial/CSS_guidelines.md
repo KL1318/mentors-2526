@@ -12,6 +12,14 @@ The website is able to switch between light and dark mode, so make sure your tex
 
 Just to be safe, the website checks messages that have the `"uses_styling"` field set to `true` for elements that can introduce harmful content onto the website, and it will not load messages that contain such elements. To make sure your message does get loaded onto the website, make sure no text that appears in [`js/disallowed_substrings.json`](../js/disallowed_substrings.json) also appears in your message.
 
+## Testing what your message looks like
+
+It's always a good idea to test if your message follows the guidelines written below! If you want to test what your message looks like, make sure you are able to launch the [`index.html`](../index.html) file in the root folder with a live server. If you are able to launch the website locally with a live server, you may change the `dir` variable, declared on the first line in [`js/contentLoader.js`](../js/contentLoader.js) to the domain and port that your live server launches on (I use the "Live Server" vscode extension by Ritwick Dey, which automatically launches at http://127.0.0.1:5500/). Make sure the variable ends in `content/`, as the script will not find the right directory if it is missing. Then, in [`content/content_dir.json`](../content/content_dir.json), add the exact name of your folder to the `"folders"` array. Launch/reload your live server and check if your message looks as intended!
+
+**IMPORTANT!**
+
+Make sure you reset the `contentLoader.js` and `content_dir.json` files to what they looked like *before* you started editing them. Your pull request will be declined if you submit it without resetting them.
+
 ## CSS guidelines
 
 Please make sure you follow these guidelines:

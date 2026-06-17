@@ -44,10 +44,9 @@ async function checkForScripts(message_obj) {
 async function loadContentToWebpage() {
     const content_folder_structure = await fetchItem(dir + "content_dir.json");
 
-    const num_folders = content_folder_structure.folder_amount;
     const folder_arr = content_folder_structure.folders;
 
-    for (let curr_folder = 0; curr_folder < num_folders; curr_folder++) {
+    for (let curr_folder = 0; curr_folder < folder_arr.length; curr_folder++) {
         const message_obj = await fetchItem(dir + folder_arr[curr_folder] + "/message.json");
         let message_contains_scripts = await checkForScripts(message_obj);
         
