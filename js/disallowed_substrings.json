@@ -51,6 +51,7 @@
         "onblur=",
         "onchange=",
         "onclick=",
+        "oncontextmenu=",
         "ondblclick=",
         "onfocus=",
         "onkeydown=",

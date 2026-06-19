@@ -12,6 +12,13 @@ document.getElementById("img-close-btn").addEventListener("click", () => {
 });
 
 
+document.getElementById("message-container").addEventListener("contextmenu", (event) => {
+    if (event.target.nodeName == "IMG" && innerWidth > 600) {
+        event.preventDefault();
+    }
+});
+
+
 async function fetchItem(directory) {
     const response = await fetch(directory);
     if (!response.ok) {
