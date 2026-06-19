@@ -34,7 +34,7 @@ Start by creating a folder with a unique name inside the "content" folder. Insid
 
 **Note!**
 
-Make sure not to edit the content_dir.json file! Editing it may result in merge conflicts with people who have forked the repo before you. I wwill make sure the file gets edited to include your message.
+Make sure not to edit the [`content_dir.json file!`](../content/content_dir.json) Editing it may result in merge conflicts with people who have forked the repo before you. I wwill make sure the file gets edited to include your message.
 
 ---
 
