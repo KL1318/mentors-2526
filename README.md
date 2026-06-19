@@ -34,7 +34,11 @@ Do **NOT** share this repo in groupchats with mentors or with the mentors direct
 
 # Uploading your message for the mentors
 
-For your message to be added, you will need to make a pull request, which is a way to add code and files to a repository like this. How you do this and what exactly you need to upload for the webpage to include your message, you can find a full tutorial on how to do this at [`main/Tutorial/How_to_upload_your_own_message.md`](./Tutorial/How_to_upload_your_own_message.md). Have you already made pull requests before and do you just want a quick explanation of what you should upload to have your message appear on the webpage? You can find this info at [`main/Tutorial/Making_your_message.md`](./Tutorial/Making_your_message.md).
+For your message to be added, you will need to make a pull request, which is a way to add code and files to a repository like this. How you do this and what exactly you need to upload for the webpage to include your message, you can find at [`main/Tutorial/How_to_upload_your_own_message.md`](./Tutorial/How_to_upload_your_own_message.md). Have you already made pull requests before and do you just want a quick explanation of what you should upload to have your message appear on the webpage? You can find this info at [`main/Tutorial/Making_your_message.md`](./Tutorial/Making_your_message.md).
+
+## I can't/don't want to make a pull request
+
+You can also submit your message through this form: [https://klm1318.limesurvey.net/141387?lang=en&newtest=Y](https://klm1318.limesurvey.net/141387?lang=en&newtest=Y).
 
 
 **THANK YOU for contributing! :) The more people add their message for the mentors to this webpage, the better of a gift it becomes!**

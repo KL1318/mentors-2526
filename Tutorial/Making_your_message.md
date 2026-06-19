@@ -6,7 +6,7 @@ This guide assumes that you have a GitHub account and you have git installed, an
 
 ## How the webpage works
 
-The webpage works by first looking at the content_dir.json file situated in the "content" folder in the root directory. This file holds an array with all the names of the folders situated in the "content" folder. Each of these folders represents a single message. Let's call these folders "message folders" from now on. 
+The webpage works by first looking at the content_dir.json file situated in the "content" folder in the root directory (make sure not to edit this file!). This file holds an array with all the names of the folders situated in the "content" folder. Each of these folders represents a single message. Let's call these folders "message folders" from now on. 
 
 Each message folder must contain at least one file, namely a "message.json" file. This file **must** have this name, it cannot be named differently. This message.json file should have the following structure:
 
@@ -30,6 +30,14 @@ Each message folder also must have a unique name, which should be clear why.
 
 Start by creating a folder with a unique name inside the "content" folder. Inside this folder, create a file named "message.json" (without the quotes), and copy the contents of [`Example_folders/Empty_message.json`](../Example_folders/Empty_message.json) into the message.json file you just created. If you want to add a picture to your message (like a group picture with your friends or mentors), also add your picture in this folder (make sure everybody in the picture is okay with you using that picture, it will be visible to the entire internet after all). 
 
+---
+
+**Note!**
+
+Make sure not to edit the content_dir.json file! Editing it may result in merge conflicts with people who have forked the repo before you. I wwill make sure the file gets edited to include your message.
+
+---
+
 You can now write your message inside the message.json file you've created! And also, you can use inline CSS to style your message! (Please follow the short CSS guidelines: [`CSS_guidelines.md`](./CSS_guidelines.md)). Here is a description of the fields you may use:
 
 | Field | Mandatory? | How to use | Example |
@@ -52,3 +60,7 @@ Here are some reasons your pull request may be declined:
 - Your message contains nonsense (random letters)
 - You are spamming pull requests (if you are making pull requests for other people, make this very clear, and indicate who you are making a pull request for)
 - You are editing files (please only upload files. If at some point there are tens of folders all with the same structure and filenames, it becomes hard for me to check if you are editing your own submission or someboody elses. Editing webpage files is not allowed.)
+
+## I can't/don't want to make a pull request
+
+You can also submit your message through this form: [https://klm1318.limesurvey.net/141387?lang=en&newtest=Y](https://klm1318.limesurvey.net/141387?lang=en&newtest=Y).
