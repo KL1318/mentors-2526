@@ -42,4 +42,6 @@ You can also submit your message through this form: [https://klm1318.limesurvey.
 
 ---
 
-**THANK YOU for contributing! :) The more people add their message for the mentors to this webpage, the better of a gift it becomes!**
+**Special thanks to Mark, Martyna, Kevin and Aryan for helping out in the initial stage of the project! And of course...**
+
+**THANK YOU 🫵 for contributing! :) The more people add their message for the mentors to this webpage, the better of a gift it becomes!**
