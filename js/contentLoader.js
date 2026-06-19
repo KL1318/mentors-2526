@@ -10,8 +10,6 @@ document.getElementById("message-container").addEventListener("click", (event) =
 document.getElementById("img-close-btn").addEventListener("click", () => {
     document.getElementById("image-view").style.display = "none";
 });
-
-
 document.getElementsByTagName("body")[0].addEventListener("contextmenu", (event) => {
     if (event.target.nodeName == "IMG" && innerWidth > 600) {
         event.preventDefault();
