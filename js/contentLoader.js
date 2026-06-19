@@ -12,7 +12,7 @@ document.getElementById("img-close-btn").addEventListener("click", () => {
 });
 
 
-document.getElementsByTagName("body").addEventListener("contextmenu", (event) => {
+document.getElementsByTagName("body")[0].addEventListener("contextmenu", (event) => {
     if (event.target.nodeName == "IMG" && innerWidth > 600) {
         event.preventDefault();
     }
