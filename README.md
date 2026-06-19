@@ -40,5 +40,6 @@ For your message to be added, you will need to make a pull request, which is a w
 
 You can also submit your message through this form: [https://klm1318.limesurvey.net/141387?lang=en&newtest=Y](https://klm1318.limesurvey.net/141387?lang=en&newtest=Y).
 
+---
 
 **THANK YOU for contributing! :) The more people add their message for the mentors to this webpage, the better of a gift it becomes!**
