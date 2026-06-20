@@ -1,4 +1,4 @@
-const dir = "http://127.0.0.1:5500/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally and https://kl1318.github.io/mentors-2526/content/ when pushing
+const dir = "https://kl1318.github.io/mentors-2526/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally and https://kl1318.github.io/mentors-2526/content/ when pushing
 
 
 document.getElementById("message-container").addEventListener("click", (event) => {
