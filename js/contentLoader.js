@@ -1,4 +1,4 @@
-const dir = "https://kl1318.github.io/mentors-2526/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally and https://kl1318.github.io/mentors-2526/content/ when pushing
+const dir = "http://127.0.0.1:5500/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally and https://kl1318.github.io/mentors-2526/content/ when pushing
 
 
 document.getElementById("message-container").addEventListener("click", (event) => {
@@ -48,8 +48,9 @@ async function checkForScripts(message_obj) {
 
 async function loadContentToWebpage() {
     const content_folder_structure = await fetchItem(dir + "content_dir.json");
-
     const folder_arr = content_folder_structure.folders;
+
+    let column_lengths = [0, 0, 0];
 
     for (let curr_folder = 0; curr_folder < folder_arr.length; curr_folder++) {
         const message_obj = await fetchItem(dir + folder_arr[curr_folder] + "/message.json");
@@ -61,7 +62,7 @@ async function loadContentToWebpage() {
                 
                 if (message_obj.image_filename !== "" && message_obj.author !== "") {
                     card = 
-                        `<div class="card card-light">
+                        `<div class="card card-light" id="${curr_folder}">
                             <img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">
                             <div class="card-text">
                                 <h2 class="card-title light">${message_obj.title}</h2>
@@ -71,7 +72,7 @@ async function loadContentToWebpage() {
                         </div>`;
                 } else if (message_obj.image_filename === "" && message_obj.author !== "") {
                     card = 
-                        `<div class="card card-light">
+                        `<div class="card card-light" id="${curr_folder}">
                             <div class="card-text">
                                 <h2 class="card-title light">${message_obj.title}</h2>
                                 <p class="card-author light"><i>${message_obj.author}</i></p>
@@ -80,7 +81,7 @@ async function loadContentToWebpage() {
                         </div>`;
                 } else if (message_obj.image_filename !== "" && message_obj.author === "") {
                     card = 
-                        `<div class="card card-light">
+                        `<div class="card card-light" id="${curr_folder}">
                             <img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">
                             <div class="card-text">
                                 <h2 class="card-title light">${message_obj.title}</h2>
@@ -89,7 +90,7 @@ async function loadContentToWebpage() {
                         </div>`;
                 } else if (message_obj.image_filename === "" && message_obj.author === "") {
                     card = 
-                        `<div class="card card-light">
+                        `<div class="card card-light" id="${curr_folder}">
                             <div class="card-text">
                                 <h2 class="card-title light">${message_obj.title}</h2>
                                 <p class="light">${message_obj.message}</p>
@@ -97,7 +98,13 @@ async function loadContentToWebpage() {
                         </div>`;
                 }
 
-                const column_num = (curr_folder % 3) + 1;
+                const smallest_col_size = Math.min(column_lengths[0], column_lengths[1], column_lengths[2]);
+                let column_num = 1;
+                if (smallest_col_size === column_lengths[1]) {
+                    column_num = 2;
+                } else if (smallest_col_size === column_lengths[2]) {
+                    column_num = 3;
+                }
                 document.getElementById("column" + column_num).innerHTML += card;
             } else if (message_obj.uses_styling == true && message_contains_scripts) {
                 console.error("Message contained illegal items. Script didn't load to prevent script injection.");
@@ -113,6 +120,7 @@ async function loadContentToWebpage() {
                 const card = document.createElement("div");
                 card.classList.add("card");
                 card.classList.add("card-light");
+                card.id = curr_folder;
                 if (image_dir !== "No image") {
                     const card_image = document.createElement("img");
                     card_image.src = image_dir;
@@ -140,11 +148,21 @@ async function loadContentToWebpage() {
                 card_message_message.innerText = message_obj.message;
                 card_message_container.appendChild(card_message_message);
 
-                const column_num = (curr_folder % 3) + 1;
+
+                const smallest_col_size = Math.min(column_lengths[0], column_lengths[1], column_lengths[2]);
+                let column_num = 1;
+                if (smallest_col_size === column_lengths[1]) {
+                    column_num = 2;
+                } else if (smallest_col_size === column_lengths[2]) {
+                    column_num = 3;
+                }
                 document.getElementById("column" + column_num).appendChild(card);
             }
     
-            // console.log(card.offsetHeight);
+            const column = Number(document.getElementById(curr_folder).parentElement.id.replace("column", "")) - 1;
+            column_lengths[column] += document.getElementById(curr_folder).offsetHeight;
+
+            console.log(column_lengths);
         } else {
             console.error(`Couldn't load ${dir + folder_arr[curr_folder] + "/message.json"}, file was not found.`);
         }
