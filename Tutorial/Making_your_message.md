@@ -4,6 +4,10 @@
 
 This guide assumes that you have a GitHub account and you have git installed, and you know how to use it, and that you know how to make a proper pull request. This guide will only explain what you need to push for your message to appear on the webpage. **Make sure you read everything below so your pull request will be accepted.**
 
+## I can't/don't want to make a pull request
+
+You can also submit your message through this form: [https://my.liberaforms.org/mentors-2526-form](https://my.liberaforms.org/mentors-2526-form).
+
 ## How the webpage works
 
 The webpage works by first looking at the content_dir.json file situated in the "content" folder in the root directory (make sure not to edit this file!). This file holds an array with all the names of the folders situated in the "content" folder. Each of these folders represents a single message. Let's call these folders "message folders" from now on. 
@@ -60,7 +64,3 @@ Here are some reasons your pull request may be declined:
 - Your message contains nonsense (random letters)
 - You are spamming pull requests (if you are making pull requests for other people, make this very clear, and indicate who you are making a pull request for)
 - You are editing files (please only upload files. If at some point there are tens of folders all with the same structure and filenames, it becomes hard for me to check if you are editing your own submission or someboody elses. Editing webpage files is not allowed.)
-
-## I can't/don't want to make a pull request
-
-You can also submit your message through this form: [https://klm1318.limesurvey.net/141387?lang=en&newtest=Y](https://klm1318.limesurvey.net/141387?lang=en&newtest=Y).

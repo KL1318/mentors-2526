@@ -38,7 +38,7 @@ For your message to be added, you will need to make a pull request, which is a w
 
 ## I can't/don't want to make a pull request
 
-You can also submit your message through this form: [https://klm1318.limesurvey.net/141387?lang=en&newtest=Y](https://klm1318.limesurvey.net/141387?lang=en&newtest=Y).
+You can also submit your message through this form: [https://my.liberaforms.org/mentors-2526-form](https://my.liberaforms.org/mentors-2526-form).
 
 ---
 
