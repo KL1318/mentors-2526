@@ -1,4 +1,4 @@
-const dir = "https://kl1318.github.io/mentors-2526/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally and https://kl1318.github.io/mentors-2526/content/ when pushing
+const dir = "http://127.0.0.1:5500/content/";     // Change to http://127.0.0.1:5500/content/ when hosting locally and https://kl1318.github.io/mentors-2526/content/ when pushing
 
 
 document.getElementById("message-container").addEventListener("click", (event) => {
@@ -58,45 +58,15 @@ async function loadContentToWebpage() {
         
         if (message_obj !== "404") {
             if (message_obj.uses_styling == true && !message_contains_scripts) {
-                let card = ``;
-                
-                if (message_obj.image_filename !== "" && message_obj.author !== "") {
-                    card = 
-                        `<div class="card card-light" id="${curr_folder}">
-                            <img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">
-                            <div class="card-text">
-                                <h2 class="card-title light">${message_obj.title}</h2>
-                                <p class="card-author light"><i>${message_obj.author}</i></p>
-                                <p class="light">${message_obj.message}</p>
-                            </div>
-                        </div>`;
-                } else if (message_obj.image_filename === "" && message_obj.author !== "") {
-                    card = 
-                        `<div class="card card-light" id="${curr_folder}">
-                            <div class="card-text">
-                                <h2 class="card-title light">${message_obj.title}</h2>
-                                <p class="card-author light"><i>${message_obj.author}</i></p>
-                                <p class="light">${message_obj.message}</p>
-                            </div>
-                        </div>`;
-                } else if (message_obj.image_filename !== "" && message_obj.author === "") {
-                    card = 
-                        `<div class="card card-light" id="${curr_folder}">
-                            <img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">
-                            <div class="card-text">
-                                <h2 class="card-title light">${message_obj.title}</h2>
-                                <p class="light">${message_obj.message}</p>
-                            </div>
-                        </div>`;
-                } else if (message_obj.image_filename === "" && message_obj.author === "") {
-                    card = 
-                        `<div class="card card-light" id="${curr_folder}">
-                            <div class="card-text">
-                                <h2 class="card-title light">${message_obj.title}</h2>
-                                <p class="light">${message_obj.message}</p>
-                            </div>
-                        </div>`;
-                }
+                let card =
+                    `<div class="card card-light" id="${curr_folder}">
+                        ${(message_obj.image_filename !== "") ? `<img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">` : `<!-- No image included -->`}
+                        <div class="card-text">
+                            <h2 class="card-title light">${message_obj.title}</h2>
+                            ${(message_obj.author !== "") ? `<p class="card-author light"><i>${message_obj.author}</i></p>` : `<!-- No author included -->`}
+                            <p class="light">${message_obj.message}</p>
+                        </div>
+                    </div>`;
 
                 const smallest_col_size = Math.min(column_lengths[0], column_lengths[1], column_lengths[2]);
                 let column_num = 1;
