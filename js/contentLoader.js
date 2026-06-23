@@ -131,8 +131,6 @@ async function loadContentToWebpage() {
     
             const column = Number(document.getElementById(curr_folder).parentElement.id.replace("column", "")) - 1;
             column_lengths[column] += document.getElementById(curr_folder).offsetHeight;
-
-            console.log(column_lengths);
         } else {
             console.error(`Couldn't load ${dir + folder_arr[curr_folder] + "/message.json"}, file was not found.`);
         }
