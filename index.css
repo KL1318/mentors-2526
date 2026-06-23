@@ -126,7 +126,7 @@ div.card {
     flex-direction: column;
     border-radius: 10px;
     padding: 5%;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 div.card img {
     object-fit: fill;
