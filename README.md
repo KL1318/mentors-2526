@@ -31,7 +31,7 @@ The idea is that as many people as possible upload a nice message and optionally
 
 Do **NOT** share this repo in groupchats with mentors or with the mentors directly! This website will be revealed to them at the final mentor event of the year (the barbeque), and we'd like to keep it a surprise until then!
 
-## Deadline
+## Deadline (IMPORTANT!)
 
 The barbeque event is on friday the 26th (that's very soon!), and to make sure I can add everything to the repo in time, the deadline for making a pull request/filling in the form is going to be friday the 26th at 15:00! Make sure you submit a mnice message before then :)
 
