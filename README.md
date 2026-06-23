@@ -25,12 +25,15 @@ Given you are still reading this, you are probably not a CS or AI mentor at this
 
 ## The concept
 
-The idea is that as many people as possible upload a nice message and optionally a picture to this repo, which builds a website that loads all of your messages and pictures, so that the mentors can read how much they've meant to you and us. The more people write a nice message, the more kind messages the mentors get to read, thus making it a better gift. So if you know other people who've enjoyed the mentor program events, please send them this repo, so they can also write their message!
+The idea is that as many people as possible upload a nice message and optionally a picture to this repo, which builds a website that loads all of your messages and pictures, so that the mentors can read how much they've meant to you and us. The more people write a nice message, the more kind messages the mentors get to read, thus making it a better gift. So if you know other people who've enjoyed the mentor program events, please send them this repo (or add them to the group chat: [https://chat.whatsapp.com/Iw7wTOj2vlZETAi9LYhw5s?s=cl&p=a&mlu=3&amv=2](https://chat.whatsapp.com/Iw7wTOj2vlZETAi9LYhw5s?s=cl&p=a&mlu=3&amv=2)), so they can also write their message!
 
 **IMPORTANT!** 
 
 Do **NOT** share this repo in groupchats with mentors or with the mentors directly! This website will be revealed to them at the final mentor event of the year (the barbeque), and we'd like to keep it a surprise until then!
 
+## Deadline
+
+The barbeque event is on friday the 26th (that's very soon!), and to make sure I can add everything to the repo in time, the deadline for making a pull request/filling in the form is going to be friday the 26th at 15:00! Make sure you submit a mnice message before then :)
 
 # Uploading your message for the mentors
 
