@@ -107,6 +107,7 @@ h1.page-header {
 
 hr.header-main-divider {
     width: 75vw;
+    margin-bottom: 10px;
 }
 
 main {
