@@ -105,6 +105,10 @@ h1.page-header {
     margin-bottom: 20px;
 }
 
+.final-message-date {
+    font-size: small;
+}
+
 hr.header-main-divider {
     width: 75vw;
     margin-bottom: 10px;
