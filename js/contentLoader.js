@@ -63,7 +63,7 @@ async function loadContentToWebpage() {
                         ${(message_obj.image_filename !== "") ? `<img src="${dir + folder_arr[curr_folder] + "/" + message_obj.image_filename}">` : `<!-- No image included -->`}
                         <div class="card-text">
                             <h2 class="card-title light">${message_obj.title}</h2>
-                            ${(message_obj.author !== "") ? `<p class="card-author light"><i>${message_obj.author}</i></p>` : `<!-- No author included -->`}
+                            ${(message_obj.author !== "") ? `<p class="card-author light"><i>From: ${message_obj.author}</i></p>` : `<!-- No author included -->`}
                             <p class="light">${message_obj.message}</p>
                         </div>
                     </div>`;
