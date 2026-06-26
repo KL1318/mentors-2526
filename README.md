@@ -1,3 +1,8 @@
+# Thanks again mentors!
+
+Below you see the readme as what it was before 26-6-2026
+
+
 # IF YOU ARE A CS/AI MENTOR, PLEASE CLOSE THIS WEBPAGE IMMEDIATELY! YOU'LL SEE WHY SOON ENOUGH.
 
 **If you are not a CS/AI mentor for 2025/2026, please keep on reading**  
