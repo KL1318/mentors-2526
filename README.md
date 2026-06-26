@@ -33,7 +33,9 @@ Do **NOT** share this repo in groupchats with mentors or with the mentors direct
 
 ## Deadline (IMPORTANT!)
 
-The barbeque event is on friday the 26th (that's very soon!), and to make sure I can add everything to the repo in time, the deadline for making a pull request/filling in the form is going to be friday the 26th at 15:00! Make sure you submit a mnice message before then :)
+The barbeque event is on friday the 26th (that's very soon!), and to make sure I can add everything to the repo in time, the deadline for making a pull request/filling in the form is going to be friday the 26th at 15:00! Make sure you submit a nice message before then :)
+
+Since the barbecue has been cancelled, the website will be sent in the mentors 25/26 community general chat between 15:30 and 16:00. The deadline above stays the same!
 
 # Uploading your message for the mentors
 
