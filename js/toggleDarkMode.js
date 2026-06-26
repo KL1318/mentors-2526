@@ -1,22 +1,22 @@
 const button = document.getElementById("dark-mode-toggle");
 
 if (getCookie("darkModeToggle") == "light") {
-    button.innerText = "⏾";
+    button.innerText = "🌙";
 } else if (getCookie("darkModeToggle") == "dark") {
-    button.innerText = "☀︎";
+    button.innerText = "☀️";
     setDarkMode();
 } else {
     setCookie("darkModeToggle", "light", 30);
-    button.innerText = "⏾";
+    button.innerText = "🌙";
 }
 
 button?.addEventListener("click", (event) => {
     if (getCookie("darkModeToggle") == "light") {
         setDarkMode();
-        button.innerText = "☀︎";
+        button.innerText = "☀️";
     } else if (getCookie("darkModeToggle") == "dark") {
         setLightMode();
-        button.innerText = "⏾";
+        button.innerText = "🌙";
     } else {
         console.err(`Couldn't find a cookie containing dark mode preferences, cookie document contains the following: ${document.cookie}`);
     }
