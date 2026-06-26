@@ -1,6 +1,6 @@
 # Thanks again mentors!
 
-Below you see the readme as what it was before 26-6-2026
+Below you see the readme as what it was before 26-6-2026. If you still want to submit a nice message you can do so before Saturday 27th 15:00!
 
 
 # IF YOU ARE A CS/AI MENTOR, PLEASE CLOSE THIS WEBPAGE IMMEDIATELY! YOU'LL SEE WHY SOON ENOUGH.
@@ -26,7 +26,7 @@ Below you see the readme as what it was before 26-6-2026
 
 # For non-mentors
 
-Given you are still reading this, you are probably not a CS or AI mentor at this moment (go away Gonçalo and Vitor, seriously). As I have had a blast this year mostly thanks to the mentor program, I decided it's time to give them something back for their hard work. And you can help out too!
+Given you are still reading this, you are probably not a CS or AI mentor at this moment (go away Gonçalo and Vitor, seriously ;). As I have had a blast this year mostly thanks to the mentor program, I decided it's time to give them something back for their hard work. And you can help out too!
 
 ## The concept
 
